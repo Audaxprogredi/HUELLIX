@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "HUELLIX × SIPECOM · Plataforma logística de recepción digital" },
+      { title: "HUELLIX · Plataforma logística de recepción digital" },
       {
         name: "description",
         content:
