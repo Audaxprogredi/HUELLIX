@@ -80,7 +80,7 @@
   --status-success: #17c964;
   --status-rejected: #f31260;
 
-  /* Light palette */
+  /* Semantic palette */
   --background: oklch(0.984 0.003 247.858);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
