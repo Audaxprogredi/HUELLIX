@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "HUELLIX × SIPECOM · Plataforma logística de recepción digital" },
+      { title: "HUELLIX  🌀 Entregas" },
       {
         name: "description",
         content:
@@ -619,11 +619,11 @@ function SiteFooter() {
             <div className="size-2.5 rounded-sm border border-white" />
           </div>
           <span className="text-sm font-bold tracking-tight">
-            SIPECOM <span className="text-muted-foreground">×</span> HUELLIX
+             <span className="text-muted-foreground">🌀</span> HUELLIX
           </span>
         </div>
         <div className="text-xs text-muted-foreground">
-          © 2026 Huellix Sipecom · Logística digital sin fricción.
+          © 2026 Huellix  · Logística digital sin fricción Con Colaboración · Sipecom
         </div>
       </div>
     </footer>
