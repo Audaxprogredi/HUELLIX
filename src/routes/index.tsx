@@ -67,20 +67,24 @@ function Index() {
 
 function SiteNav() {
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-card/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <div className="flex items-center gap-2">
-          <div
-            className="flex size-8 items-center justify-center rounded-lg"
-            style={{ background: "var(--brand-vivid)" }}
-          >
-            <div className="size-3.5 rounded-sm border-2 border-white" />
-          </div>
-          <span className="text-lg font-bold tracking-tight">
-            HUELLIX <span style={{ color: "var(--brand-vivid)" }}>/</span> SIPECOM
-          </span>
+    <nav className="sticky top-0 z-50 border-b border-border bg-card/70 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-3 md:h-16 md:flex-row md:items-center md:justify-between md:py-0">
+        <div className="flex items-center justify-between gap-2">
+          <a href="#top" className="flex items-center gap-2">
+            <span
+              className="flex size-9 items-center justify-center rounded-xl text-lg"
+              style={{
+                background: "linear-gradient(135deg, var(--brand-pale), var(--brand-vivid))",
+                boxShadow: "0 0 20px -4px color-mix(in oklab, var(--brand-vivid) 60%, transparent)",
+              }}
+              aria-hidden
+            >
+              🖐️
+            </span>
+            <span className="text-lg font-bold tracking-tight text-foreground">HUELLIX</span>
+          </a>
         </div>
-        <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
           <a href="#evidencia" className="transition-colors hover:text-foreground">
             Evidencia
           </a>
@@ -91,7 +95,7 @@ function SiteNav() {
             Dashboard
           </a>
           <button
-            className="rounded-lg px-4 py-2 font-semibold text-white shadow-sm transition-all hover:opacity-90"
+            className="ml-auto rounded-lg px-4 py-2 font-semibold text-white shadow-sm transition-all hover:opacity-90 md:ml-0"
             style={{
               background: "var(--brand-orange)",
               boxShadow: "0 6px 18px -6px color-mix(in oklab, var(--brand-orange) 55%, transparent)",
