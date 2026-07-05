@@ -111,33 +111,55 @@ function SiteNav() {
 
 function Hero() {
   return (
-    <section className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-        <div className="max-w-3xl">
-          <div
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-wide"
-            style={{ color: "var(--brand-vivid)" }}
-          >
+    <section
+      id="top"
+      className="relative overflow-hidden border-b border-border"
+      style={{
+        background:
+          "linear-gradient(135deg, #0693e3 0%, #06344d 45%, #050a14 100%)",
+      }}
+    >
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 15% 20%, rgba(142,209,252,0.35), transparent 40%), radial-gradient(circle at 85% 90%, rgba(255,105,0,0.25), transparent 45%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:py-28">
+        <div className="max-w-3xl text-white">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide backdrop-blur-md">
             <span className="size-1.5 rounded-full" style={{ background: "var(--brand-orange)" }} />
-            Plataforma de recepción digital
+            <span style={{ color: "var(--brand-pale)" }}>Plataforma de recepción digital</span>
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             Tres capas para blindar cada{" "}
-            <span style={{ color: "var(--brand-vivid)" }}>entrega</span>: evidencia, asistente y{" "}
+            <span style={{ color: "var(--brand-pale)" }}>entrega</span>: evidencia, asistente y{" "}
             <span style={{ color: "var(--brand-orange)" }}>dashboard</span>.
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75">
             Diseñado para bodegas y tiendas retail con altos volúmenes de recepción. Sin dependencia
             de un ERP externo.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <button
               className="rounded-lg px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
-              style={{ background: "var(--brand-orange)" }}
+              style={{
+                background: "var(--brand-orange)",
+                boxShadow: "0 10px 30px -8px color-mix(in oklab, var(--brand-orange) 65%, transparent)",
+              }}
             >
               Probar plataforma
             </button>
-            <button className="rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted">
+            <button className="rounded-lg border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/15">
               Ver demo guiada
             </button>
           </div>
