@@ -75,6 +75,10 @@
   /* Brand colors (exact hex from project brief) */
   --brand-pale: #8ed1fc;
   --brand-vivid: #0693e3;
+  --brand-orange: #ff6900;
+  --status-progress: #f5a524;
+  --status-success: #17c964;
+  --status-rejected: #f31260;
 
   /* Semantic palette */
   --background: oklch(0.984 0.003 247.858);
