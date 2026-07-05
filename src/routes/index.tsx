@@ -84,18 +84,12 @@ function SiteNav() {
             <span className="text-lg font-bold tracking-tight text-foreground">HUELLIX</span>
           </a>
         </div>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
-          <a href="#evidencia" className="transition-colors hover:text-foreground">
-            Evidencia
-          </a>
-          <a href="#asistente" className="transition-colors hover:text-foreground">
-            Asistente IA
-          </a>
-          <a href="#dashboard" className="transition-colors hover:text-foreground">
-            Dashboard
-          </a>
+        <div className="flex flex-wrap items-center gap-2">
+          <NavPill href="#evidencia" label="1 · Evidencia" />
+          <NavPill href="#asistente" label="2 · Asistente IA" />
+          <NavPill href="#dashboard" label="3 · Dashboard" />
           <button
-            className="ml-auto rounded-lg px-4 py-2 font-semibold text-white shadow-sm transition-all hover:opacity-90 md:ml-0"
+            className="ml-auto rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:opacity-90 md:ml-2"
             style={{
               background: "var(--brand-orange)",
               boxShadow: "0 6px 18px -6px color-mix(in oklab, var(--brand-orange) 55%, transparent)",
