@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Evidencia digital, asistente inteligente y dashboard operativo para la recepción logística.",
+          "Registro digital, asistente inteligente y dashboard operativo para la recepción logística.",
       },
     ],
   }),
@@ -57,7 +57,7 @@ function Index() {
     <div className="min-h-screen bg-background font-sans text-foreground">
       <SiteNav />
       <Hero />
-      <SectionEvidence />
+      <SectionRegistros />
       <SectionChatbot />
       <SectionDashboard />
       <SiteFooter />
@@ -81,8 +81,8 @@ function SiteNav() {
           </span>
         </div>
         <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
-          <a href="#evidencia" className="transition-colors hover:text-foreground">
-            Evidencia
+          <a href="#registros" className="transition-colors hover:text-foreground">
+            Registros
           </a>
           <a href="#asistente" className="transition-colors hover:text-foreground">
             Asistente IA
@@ -119,7 +119,7 @@ function Hero() {
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             Tres capas para blindar cada{" "}
-            <span style={{ color: "var(--brand-vivid)" }}>entrega</span>: evidencia, asistente y{" "}
+            <span style={{ color: "var(--brand-vivid)" }}>entrega</span>: registro, asistente y{" "}
             <span style={{ color: "var(--brand-orange)" }}>dashboard</span>.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
@@ -143,14 +143,14 @@ function Hero() {
   );
 }
 
-/* -------------------- 1. EVIDENCIA DIGITAL -------------------- */
-function SectionEvidence() {
+/* -------------------- 1. Registro DIGITAL -------------------- */
+function SectionRegistros() {
   return (
-    <section id="evidencia" className="border-b border-border bg-muted/40 py-20">
+    <section id="registro" className="border-b border-border bg-muted/40 py-20">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           index="01"
-          eyebrow="Evidencia digital"
+          eyebrow="Registro digital"
           title="Cámara activa + metadatos automáticos"
           description="Cada captura queda firmada con timestamp, fecha y coordenadas GPS del punto exacto de recepción."
         />

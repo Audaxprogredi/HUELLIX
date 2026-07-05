@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Sistema digital de gestión de entregas para retail. Controla, valida y evidencia el flujo logístico con huella digital (GPS, firma, fotos, timestamp e IA).",
+          "Sistema digital de gestión de entregas para retail. Controla, valida y registra el flujo logístico con huella digital (GPS, firma, fotos, timestamp e IA).",
       },
       { name: "author", content: "HUELLIX + SIPECOM" },
       {
@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Sistema digital de gestión de entregas para retail. Controla, valida y evidencia el flujo logístico con huella digital.",
+          "Sistema digital de gestión de entregas para retail. Controla, valida y registra el flujo logístico con huella digital.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
