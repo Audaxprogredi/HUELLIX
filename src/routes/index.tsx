@@ -84,18 +84,12 @@ function SiteNav() {
             <span className="text-lg font-bold tracking-tight text-foreground">HUELLIX</span>
           </a>
         </div>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
-          <a href="#evidencia" className="transition-colors hover:text-foreground">
-            Evidencia
-          </a>
-          <a href="#asistente" className="transition-colors hover:text-foreground">
-            Asistente IA
-          </a>
-          <a href="#dashboard" className="transition-colors hover:text-foreground">
-            Dashboard
-          </a>
+        <div className="flex flex-wrap items-center gap-2">
+          <NavPill href="#evidencia" label="1 · Evidencia" />
+          <NavPill href="#asistente" label="2 · Asistente IA" />
+          <NavPill href="#dashboard" label="3 · Dashboard" />
           <button
-            className="ml-auto rounded-lg px-4 py-2 font-semibold text-white shadow-sm transition-all hover:opacity-90 md:ml-0"
+            className="ml-auto rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:opacity-90 md:ml-2"
             style={{
               background: "var(--brand-orange)",
               boxShadow: "0 6px 18px -6px color-mix(in oklab, var(--brand-orange) 55%, transparent)",
@@ -106,6 +100,36 @@ function SiteNav() {
         </div>
       </div>
     </nav>
+  );
+}
+
+function NavPill({ href, label }: { href: string; label: string }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const el = document.getElementById(href.replace("#", ""));
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", href);
+    }
+  };
+  return (
+    <a
+      href={href}
+      onClick={handleClick}
+      className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground shadow-sm transition-all hover:-translate-y-0.5"
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = "var(--brand-vivid)";
+        e.currentTarget.style.color = "#fff";
+        e.currentTarget.style.borderColor = "var(--brand-vivid)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = "";
+        e.currentTarget.style.color = "";
+        e.currentTarget.style.borderColor = "";
+      }}
+    >
+      {label}
+    </a>
   );
 }
 
