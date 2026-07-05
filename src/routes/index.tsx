@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Evidencia digital, asistente inteligente y dashboard operativo en una sola plataforma para la recepción logística.",
+          "Evidencia digital, asistente inteligente y dashboard operativo para la recepción logística.",
       },
     ],
   }),
@@ -77,7 +77,7 @@ function SiteNav() {
             <div className="size-3.5 rounded-sm border-2 border-white" />
           </div>
           <span className="text-lg font-bold tracking-tight">
-            HUELLIX <span style={{ color: "var(--brand-vivid)" }}>/</span> SIPECOM
+            HUELLIX <span style={{ color: "var(--brand-vivid)" }}>/</span> ESPOL
           </span>
         </div>
         <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
@@ -97,7 +97,7 @@ function SiteNav() {
               boxShadow: "0 6px 18px -6px color-mix(in oklab, var(--brand-orange) 55%, transparent)",
             }}
           >
-            Solicitar demo
+            Desacargar App
           </button>
         </div>
       </div>
@@ -131,10 +131,10 @@ function Hero() {
               className="rounded-lg px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
               style={{ background: "var(--brand-orange)" }}
             >
-              Probar plataforma
+              Probar Dashboard (boton no funcional por ahora)
             </button>
             <button className="rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted">
-              Ver demo guiada
+              Descargar App desde 3ros
             </button>
           </div>
         </div>
