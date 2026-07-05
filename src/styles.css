@@ -61,6 +61,10 @@
   /* Brand tokens for direct component use */
   --color-brand-pale: var(--brand-pale);
   --color-brand-vivid: var(--brand-vivid);
+  --color-brand-orange: var(--brand-orange);
+  --color-status-progress: var(--status-progress);
+  --color-status-success: var(--status-success);
+  --color-status-rejected: var(--status-rejected);
 
   --font-sans: "Inter", system-ui, sans-serif;
 }
