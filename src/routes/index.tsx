@@ -103,6 +103,36 @@ function SiteNav() {
   );
 }
 
+function NavPill({ href, label }: { href: string; label: string }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const el = document.getElementById(href.replace("#", ""));
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", href);
+    }
+  };
+  return (
+    <a
+      href={href}
+      onClick={handleClick}
+      className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground shadow-sm transition-all hover:-translate-y-0.5"
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = "var(--brand-vivid)";
+        e.currentTarget.style.color = "#fff";
+        e.currentTarget.style.borderColor = "var(--brand-vivid)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = "";
+        e.currentTarget.style.color = "";
+        e.currentTarget.style.borderColor = "";
+      }}
+    >
+      {label}
+    </a>
+  );
+}
+
 function Hero() {
   return (
     <section
