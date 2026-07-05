@@ -622,15 +622,17 @@ function SiteFooter() {
     <footer className="border-t border-border bg-card py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
         <div className="flex items-center gap-2">
-          <div className="flex size-6 items-center justify-center rounded" style={{ background: "var(--brand-vivid)" }}>
-            <div className="size-2.5 rounded-sm border border-white" />
-          </div>
-          <span className="text-sm font-bold tracking-tight">
-            SIPECOM <span className="text-muted-foreground">×</span> HUELLIX
+          <span
+            className="flex size-7 items-center justify-center rounded-lg text-sm"
+            style={{ background: "linear-gradient(135deg, var(--brand-pale), var(--brand-vivid))" }}
+            aria-hidden
+          >
+            🖐️
           </span>
+          <span className="text-sm font-bold tracking-tight">HUELLIX</span>
         </div>
         <div className="text-xs text-muted-foreground">
-          © 2026 Huellix Sipecom · Logística digital sin fricción.
+          © 2026 HUELLIX · Logística digital sin fricción.
         </div>
       </div>
     </footer>
