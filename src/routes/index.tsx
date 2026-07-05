@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "HUELLIX  🌀 Entregas" },
+      { title: "HUELLIX Entregas e Informes" },
       {
         name: "description",
         content:
@@ -104,39 +104,56 @@ function SiteNav() {
     </nav>
   );
 }
+import dashboardImg from "../assets/huellix-dashboard.jpg";
+import dashboardImg2 from "../assets/huellix-mobile-app.jpg";
 
 function Hero() {
   return (
     <section className="border-b border-border">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-        <div className="max-w-3xl">
-          <div
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-wide"
-            style={{ color: "var(--brand-vivid)" }}
-          >
-            <span className="size-1.5 rounded-full" style={{ background: "var(--brand-orange)" }} />
-            Plataforma de recepción digital
-          </div>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Tres capas para blindar cada{" "}
-            <span style={{ color: "var(--brand-vivid)" }}>entrega</span>: registro, asistente y{" "}
-            <span style={{ color: "var(--brand-orange)" }}>dashboard</span>.
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Diseñado para bodegas y tiendas retail con altos volúmenes de recepción. Sin dependencia
-            de un ERP externo.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <button
-              className="rounded-lg px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
-              style={{ background: "var(--brand-orange)" }}
+        {/* Contenedor principal con Grid: 1 columna en móvil, 2 en pantallas grandes (lg) */}
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          
+          {/* Columna Izquierda: Texto y botones */}
+          <div className="max-w-3xl">
+            <div
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-wide"
+              style={{ color: "var(--brand-vivid)" }}
             >
-              Probar Dashboard (boton no funcional por ahora)
-            </button>
-            <button className="rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted">
-              Descargar App desde 3ros
-            </button>
+              <span className="size-1.5 rounded-full" style={{ background: "var(--brand-orange)" }} />
+              Plataforma de recepción digital
+            </div>
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Tres capas para blindar cada{" "}
+              <span style={{ color: "var(--brand-vivid)" }}>entrega</span>: registro, asistente y{" "}
+              <span style={{ color: "var(--brand-orange)" }}>dashboard</span>.
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Diseñado para bodegas y tiendas retail con altos volúmenes de recepción. Sin dependencia
+              de un ERP externo.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <button
+                className="rounded-lg px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
+                style={{ background: "var(--brand-orange)" }}
+              >
+                Probar Dashboard (boton no funcional por ahora)
+              </button>
+              <button className="rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted">
+                Descargar App desde 3ros
+              </button>
+            </div>
           </div>
+
+          {/* Columna Derecha: Imagen del Dashboard */}
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={dashboardImg}
+              alt="Dashboard de Huellix"
+              className="w-full max-w-lg rounded-2xl border border-border shadow-2xl object-cover"
+            />
+          </div>
+          
         </div>
       </div>
     </section>
@@ -148,13 +165,30 @@ function SectionRegistros() {
   return (
     <section id="registro" className="border-b border-border bg-muted/40 py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeader
-          index="01"
-          eyebrow="Registro digital"
-          title="Cámara activa + metadatos automáticos"
-          description="Cada captura queda firmada con timestamp, fecha y coordenadas GPS del punto exacto de recepción."
-        />
+        
+        {/* Contenedor Grid para alinear el texto (SectionHeader) y la imagen a la misma altura */}
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          
+          {/* Columna Izquierda: Texto */}
+          <div>
+            <SectionHeader
+              index="01"
+              eyebrow="Registro digital"
+              title="Cámara activa + metadatos automáticos"
+              description="Cada captura queda firmada con timestamp, fecha y coordenadas GPS del punto exacto de recepción."
+            />
+          </div>
 
+          {/* Columna Derecha: Imagen con anchura automática */}
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={dashboardImg2}
+              alt="Dashboard de Huellix"
+              /* Usamos w-auto para que tome su anchura original/automática */
+              className="w-auto max-w-lg h-[250px] rounded-2xl border border-border shadow-2xl object-cover"
+            />
+          </div>
+          </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           {/* Camera module */}
           <div className="overflow-hidden rounded-2xl border border-border bg-neutral-950 text-white shadow-xl">
@@ -248,7 +282,7 @@ function SectionRegistros() {
               <MetaRow
                 icon={<Signature className="size-4" />}
                 label="Firma responsable"
-                value="J. Pérez · Bodega Norte"
+                value="José Salazar · Bodega Muy Norte"
               />
             </ul>
 
