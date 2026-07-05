@@ -46,7 +46,7 @@ const seedChat: ChatMsg[] = [
   { role: "user", text: "Cita CT-2210" },
   {
     role: "bot",
-    text: "Descarga completa. Acta firmada por J. Pérez.",
+    text: "Descarga completa. Acta firmada por Luis y Andres.",
     status: "success",
     guide: "CT-2210",
   },
@@ -70,12 +70,11 @@ function SiteNav() {
     <nav className="sticky top-0 z-50 border-b border-border bg-card/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-2">
-          <div
-            className="flex size-8 items-center justify-center rounded-lg"
-            style={{ background: "var(--brand-vivid)" }}
-          >
-            <div className="size-3.5 rounded-sm border-2 border-white" />
-          </div>
+          <img 
+            src="/favicon.ico" 
+            alt="Logo Huellix" 
+            className="size-8 rounded-lg object-contain" 
+          />
           <span className="text-lg font-bold tracking-tight">
             HUELLIX <span style={{ color: "var(--brand-vivid)" }}>/</span> ESPOL
           </span>
@@ -109,7 +108,7 @@ import dashboardImg2 from "../assets/huellix-mobile-app.jpg";
 
 function Hero() {
   return (
-    <section className="border-b border-border">
+    <section className="border-b border-border bg-gradient-to-b from-blue-200 to-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
         {/* Contenedor principal con Grid: 1 columna en móvil, 2 en pantallas grandes (lg) */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -129,7 +128,7 @@ function Hero() {
               <span style={{ color: "var(--brand-orange)" }}>dashboard</span>.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Diseñado para bodegas y tiendas retail con altos volúmenes de recepción. Sin dependencia
+              Diseñado para bodegas y tiendas retail con altos volúmenes de recepción. Sin dependencia constante
               de un ERP externo.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -163,7 +162,7 @@ function Hero() {
 /* -------------------- 1. Registro DIGITAL -------------------- */
 function SectionRegistros() {
   return (
-    <section id="registro" className="border-b border-border bg-muted/40 py-20">
+    <section id="registro" className="border-b border-border bg-muted/40 py-20 bg-gradient-to-b from-black-20 to-white">
       <div className="mx-auto max-w-7xl px-6">
         
         {/* Contenedor Grid para alinear el texto (SectionHeader) y la imagen a la misma altura */}
@@ -282,7 +281,7 @@ function SectionRegistros() {
               <MetaRow
                 icon={<Signature className="size-4" />}
                 label="Firma responsable"
-                value="José Salazar · Bodega Muy Norte"
+                value="José Salazar · Bodega Muy Escondida"
               />
             </ul>
 
@@ -361,7 +360,7 @@ function SectionChatbot() {
   };
 
   return (
-    <section id="asistente" className="border-b border-border py-20">
+    <section id="asistente" className="border-b border-border py-20 bg-gradient-to-b from-orange-200 to-white">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           index="02"
@@ -649,8 +648,12 @@ function SiteFooter() {
     <footer className="border-t border-border bg-card py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
         <div className="flex items-center gap-2">
-          <div className="flex size-6 items-center justify-center rounded" style={{ background: "var(--brand-vivid)" }}>
-            <div className="size-2.5 rounded-sm border border-white" />
+          <div className="flex size-6 items-center justify-center rounded" >
+          <img 
+            src="/favicon.ico" 
+            alt="Logo Huellix" 
+            className="size-8 rounded-lg object-contain" 
+          />
           </div>
           <span className="text-sm font-bold tracking-tight">
              <span className="text-muted-foreground">🌀</span> HUELLIX
