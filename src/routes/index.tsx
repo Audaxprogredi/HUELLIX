@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "HUELLIX × SIPECOM · Plataforma logística de recepción digital" },
+      { title: "HUELLIX · Plataforma logística de recepción digital" },
       {
         name: "description",
         content:
@@ -67,20 +67,24 @@ function Index() {
 
 function SiteNav() {
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-card/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <div className="flex items-center gap-2">
-          <div
-            className="flex size-8 items-center justify-center rounded-lg"
-            style={{ background: "var(--brand-vivid)" }}
-          >
-            <div className="size-3.5 rounded-sm border-2 border-white" />
-          </div>
-          <span className="text-lg font-bold tracking-tight">
-            HUELLIX <span style={{ color: "var(--brand-vivid)" }}>/</span> SIPECOM
-          </span>
+    <nav className="sticky top-0 z-50 border-b border-border bg-card/70 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-3 md:h-16 md:flex-row md:items-center md:justify-between md:py-0">
+        <div className="flex items-center justify-between gap-2">
+          <a href="#top" className="flex items-center gap-2">
+            <span
+              className="flex size-9 items-center justify-center rounded-xl text-lg"
+              style={{
+                background: "linear-gradient(135deg, var(--brand-pale), var(--brand-vivid))",
+                boxShadow: "0 0 20px -4px color-mix(in oklab, var(--brand-vivid) 60%, transparent)",
+              }}
+              aria-hidden
+            >
+              🖐️
+            </span>
+            <span className="text-lg font-bold tracking-tight text-foreground">HUELLIX</span>
+          </a>
         </div>
-        <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
           <a href="#evidencia" className="transition-colors hover:text-foreground">
             Evidencia
           </a>
@@ -91,7 +95,7 @@ function SiteNav() {
             Dashboard
           </a>
           <button
-            className="rounded-lg px-4 py-2 font-semibold text-white shadow-sm transition-all hover:opacity-90"
+            className="ml-auto rounded-lg px-4 py-2 font-semibold text-white shadow-sm transition-all hover:opacity-90 md:ml-0"
             style={{
               background: "var(--brand-orange)",
               boxShadow: "0 6px 18px -6px color-mix(in oklab, var(--brand-orange) 55%, transparent)",
@@ -107,33 +111,55 @@ function SiteNav() {
 
 function Hero() {
   return (
-    <section className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-        <div className="max-w-3xl">
-          <div
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-wide"
-            style={{ color: "var(--brand-vivid)" }}
-          >
+    <section
+      id="top"
+      className="relative overflow-hidden border-b border-border"
+      style={{
+        background:
+          "linear-gradient(135deg, #0693e3 0%, #06344d 45%, #050a14 100%)",
+      }}
+    >
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 15% 20%, rgba(142,209,252,0.35), transparent 40%), radial-gradient(circle at 85% 90%, rgba(255,105,0,0.25), transparent 45%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+      <div className="relative mx-auto max-w-7xl px-6 py-20 lg:py-28">
+        <div className="max-w-3xl text-white">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide backdrop-blur-md">
             <span className="size-1.5 rounded-full" style={{ background: "var(--brand-orange)" }} />
-            Plataforma de recepción digital
+            <span style={{ color: "var(--brand-pale)" }}>Plataforma de recepción digital</span>
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             Tres capas para blindar cada{" "}
-            <span style={{ color: "var(--brand-vivid)" }}>entrega</span>: evidencia, asistente y{" "}
+            <span style={{ color: "var(--brand-pale)" }}>entrega</span>: evidencia, asistente y{" "}
             <span style={{ color: "var(--brand-orange)" }}>dashboard</span>.
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75">
             Diseñado para bodegas y tiendas retail con altos volúmenes de recepción. Sin dependencia
             de un ERP externo.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <button
               className="rounded-lg px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
-              style={{ background: "var(--brand-orange)" }}
+              style={{
+                background: "var(--brand-orange)",
+                boxShadow: "0 10px 30px -8px color-mix(in oklab, var(--brand-orange) 65%, transparent)",
+              }}
             >
               Probar plataforma
             </button>
-            <button className="rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted">
+            <button className="rounded-lg border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/15">
               Ver demo guiada
             </button>
           </div>
@@ -156,70 +182,51 @@ function SectionEvidence() {
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-          {/* Camera module */}
-          <div className="overflow-hidden rounded-2xl border border-border bg-neutral-950 text-white shadow-xl">
-            <div className="flex items-center justify-between border-b border-white/10 px-5 py-3 text-xs">
-              <div className="flex items-center gap-2 font-medium">
-                <span className="size-2 animate-pulse rounded-full bg-red-500" />
-                REC · Cámara trasera
-              </div>
-              <span className="font-mono text-white/70">1080p · 30fps</span>
-            </div>
-            <div className="relative aspect-[4/3] w-full">
-              {/* Simulated camera view */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "radial-gradient(circle at 30% 40%, #0b3a52 0%, #061726 60%, #030b13 100%)",
-                }}
-              />
-              {/* Grid overlay */}
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-                  backgroundSize: "80px 80px",
-                }}
-              />
-              {/* Focus reticle */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative size-40">
-                  <div
-                    className="absolute inset-0 rounded-md border-2"
-                    style={{ borderColor: "var(--brand-orange)" }}
-                  />
-                  <div className="absolute -top-6 left-0 text-[10px] font-semibold uppercase tracking-widest text-white/80">
-                    Enfoque · Precinto
-                  </div>
-                </div>
-              </div>
-              {/* Package preview */}
-              <div className="absolute bottom-6 left-6 rounded-lg bg-white/10 px-3 py-2 text-xs backdrop-blur-md">
-                <div className="font-mono">GUÍA G-4581</div>
-                <div className="text-white/70">Proveedor: LogiSur SA</div>
-              </div>
-              {/* Capture button */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                <div
-                  className="flex size-14 items-center justify-center rounded-full border-4 border-white/80"
-                  style={{ boxShadow: "0 0 0 4px rgba(255,105,0,0.35)" }}
-                >
-                  <div
-                    className="size-9 rounded-full"
-                    style={{ background: "var(--brand-orange)" }}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center justify-between border-t border-white/10 px-5 py-3 text-xs text-white/70">
-              <span className="flex items-center gap-2">
-                <Camera className="size-4" />5 fotos · 2 firmas
+          {/* Upload / capture module */}
+          <div
+            className="relative overflow-hidden rounded-2xl border border-white/10 p-8 text-white shadow-2xl"
+            style={{
+              background:
+                "linear-gradient(135deg, #0693e3 0%, #06344d 55%, #04101a 100%)",
+            }}
+          >
+            <div
+              className="pointer-events-none absolute inset-0 opacity-30"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 20% 20%, rgba(142,209,252,0.35), transparent 45%), radial-gradient(circle at 80% 80%, rgba(255,105,0,0.25), transparent 50%)",
+              }}
+            />
+            <div className="relative flex flex-col items-center justify-center gap-6 py-8 text-center">
+              <span
+                className="flex size-20 items-center justify-center rounded-2xl border border-white/20 backdrop-blur-md"
+                style={{ background: "rgba(255,255,255,0.08)" }}
+              >
+                <Camera className="size-9" />
               </span>
-              <span className="font-mono">SESIÓN #48219</span>
+              <div>
+                <div className="text-xl font-bold">Registra la evidencia</div>
+                <p className="mt-2 max-w-sm text-sm text-white/70">
+                  Toma una foto o sube una imagen. Se firma automáticamente con GPS, fecha y hora.
+                </p>
+              </div>
+              <label
+                className="inline-flex cursor-pointer items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:opacity-90"
+                style={{
+                  background: "var(--brand-orange)",
+                  boxShadow: "0 10px 30px -8px color-mix(in oklab, var(--brand-orange) 65%, transparent)",
+                }}
+              >
+                <Camera className="size-4" />
+                Abrir cámara / Subir foto
+                <input type="file" accept="image/*" capture="environment" className="hidden" />
+              </label>
+              <span className="text-[11px] uppercase tracking-widest text-white/60">
+                Formatos JPG · PNG · HEIC
+              </span>
             </div>
           </div>
+
 
           {/* Metadata panel */}
           <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
@@ -615,15 +622,17 @@ function SiteFooter() {
     <footer className="border-t border-border bg-card py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
         <div className="flex items-center gap-2">
-          <div className="flex size-6 items-center justify-center rounded" style={{ background: "var(--brand-vivid)" }}>
-            <div className="size-2.5 rounded-sm border border-white" />
-          </div>
-          <span className="text-sm font-bold tracking-tight">
-            SIPECOM <span className="text-muted-foreground">×</span> HUELLIX
+          <span
+            className="flex size-7 items-center justify-center rounded-lg text-sm"
+            style={{ background: "linear-gradient(135deg, var(--brand-pale), var(--brand-vivid))" }}
+            aria-hidden
+          >
+            🖐️
           </span>
+          <span className="text-sm font-bold tracking-tight">HUELLIX</span>
         </div>
         <div className="text-xs text-muted-foreground">
-          © 2026 Huellix Sipecom · Logística digital sin fricción.
+          © 2026 HUELLIX · Logística digital sin fricción.
         </div>
       </div>
     </footer>
